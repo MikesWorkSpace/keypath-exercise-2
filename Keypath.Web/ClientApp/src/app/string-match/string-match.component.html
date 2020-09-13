@@ -10,7 +10,7 @@
   <div class="form-group">
     <label for="wordToAdd" class="mr-2"><strong>Add Word to Database:</strong></label>
     <input type="text" class="form-control mr-2" [(ngModel)]="newWord" id="wordToAdd" [ngModelOptions]="{standalone: true}" />
-    <button type="submit" class="btn btn-primary mr-2" (click)="addWord()">Add Word</button>
+    <button type="submit" class="btn btn-primary mr-2" (click)="addWord()" [disabled]="!newWord">Add Word</button>
   </div>
 </form>
 

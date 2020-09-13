@@ -16,3 +16,8 @@ span.wordGrid {
 hr {
     border: 2px solid grey;
 }
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}

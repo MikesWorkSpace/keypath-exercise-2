@@ -10,8 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StringMatchComponent implements OnInit {
   public exampleItems: ExampleItem[];
-  public http: HttpClient;
-  public restApiBaseUrl: string;
+  private http: HttpClient;
+  private restApiBaseUrl: string;
   public error = false;
   public filter: string;
   public filterInfo: string;
@@ -24,15 +24,8 @@ export class StringMatchComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<ExampleItem[]>(this.restApiBaseUrl + 'ExampleItems')
-      .subscribe(
-        result => {
-          this.loadResults(result);
-        },
-        error => {
-          console.error(error);
-          this.error = true;
-        });
+    this.filter = "";
+    this.applyFilter();
   }
 
   applyFilter() {
@@ -62,7 +55,6 @@ export class StringMatchComponent implements OnInit {
     }
     this.filterInfo += " [Word Count: " + this.exampleItems.length.toString() + "]";
     console.log("retrieved ", this.exampleItems.length, " items from the database with filter: '" + this.filter + "'");
-
   }
 
 
