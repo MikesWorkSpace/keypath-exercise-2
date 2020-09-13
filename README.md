@@ -1,5 +1,17 @@
 # keypath-exercise-2
 Keypath Coding Exercise Project
+<p>
+Exercise 2
+Using any available technology resources available to yourself. Build an application consisting of 2 parts. 
+<ul>
+<li>A web API that accepts a data and records that data to a database of your choosing. Build a</li>
+	<ul>
+		<li>API should be able to accept Query String, form-data, and JSON.</li>
+		<li>At least one field passed in should be of string value.</li>
+	</ul>
+<li>A web front end capable of taking a string and returning a grid of submitted records the match the string based on a “contains” or “Equals” criteria.</li>
+</ul>
+</p>
 
 Visual Studio 2019 Project
 <br>
