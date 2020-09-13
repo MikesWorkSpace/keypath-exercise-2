@@ -68,7 +68,7 @@ export class StringMatchComponent implements OnInit {
 
   addWord() {
 
-    const payload: any = {
+    const payload = {
       word: this.newWord,
       sortOrder: 0
     };
@@ -81,7 +81,7 @@ export class StringMatchComponent implements OnInit {
         JSON.stringify(payload), { 'headers': headers })
       .subscribe(
         result => {
-          console.log("Successfully added row");
+          console.log("Successfully added row. Service responded with: '", result,"'");
           this.newWord = "";
           this.clearFilter();
         },
