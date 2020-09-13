@@ -1,0 +1,36 @@
+<h1 id="tableLabel">String Matcher (Exercise 2 UI)</h1>
+
+<p>This component demonstrates fetching data from the REST API ExampleItem entities.</p>
+
+<p *ngIf="!exampleItems && !error"><em>Loading...</em></p>
+<p *ngIf="error"><em>An error occured during retrieval of data from the database...</em></p>
+
+<hr />
+<form class="form-inline" *ngIf="exampleItems && !error">
+  <div class="form-group">
+    <label for="wordToAdd" class="mr-2"><strong>Add Word to Database:</strong></label>
+    <input type="text" class="form-control mr-2" [(ngModel)]="newWord" id="wordToAdd" [ngModelOptions]="{standalone: true}" />
+    <button type="submit" class="btn btn-primary mr-2" (click)="addWord()">Add Word</button>
+  </div>
+</form>
+
+<hr />
+<form class="form-inline" *ngIf="exampleItems && !error">
+  <div class="form-group">
+    <label for="filterString" class="mr-2"><strong>Filter:</strong></label>
+    <input type="text" class="form-control mr-2" [(ngModel)]="filter" id="filterString" [ngModelOptions]="{standalone: true}" />
+    <button type="submit" class="btn btn-primary mr-2" (click)="applyFilter()">Apply Filter</button>
+    <button type="button" class="btn btn-secondary mr-2" (click)="clearFilter()">Clear Filter</button>
+  </div>
+</form>
+<hr class="mb-4" />
+
+<div>
+  <h2>Words {{ filterInfo }} </h2>
+  <div *ngIf="exampleItems && !error">
+    <span class="wordGrid" *ngFor="let exampleItem of exampleItems">
+      {{ exampleItem.word }}
+    </span>
+  </div>
+</div>
+
