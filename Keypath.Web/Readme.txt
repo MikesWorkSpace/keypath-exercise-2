@@ -27,3 +27,13 @@ Enable logging the application process' stdout messages
 Attach a debugger to the application process and inspect
 For more information visit: https://go.microsoft.com/fwlink/?LinkID=2028526
 -----------------------------------------------------------------------------------------------------
+
+FIX FOR ABOVE 500.35 Problem
+FIX FOR ABOVE 500.35 Problem
+FIX FOR ABOVE 500.35 Problem
+FIX FOR ABOVE 500.35 Problem
+
+https://stackoverflow.com/questions/58246822/http-error-500-35-ancm-multiple-in-process-applications-in-same-process-asp-ne
+
+Follow the instructions on the "It's cuyrrently a bug in VS2019 - (Nov 4'2019)"
+-	deleting the .applicatoinhost.config file in the hidden .vs folder at the solution root took care of it. It's nested inside the folder structur
