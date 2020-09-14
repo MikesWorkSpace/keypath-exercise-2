@@ -17,7 +17,9 @@ export class StringMatchComponent implements OnInit {
   public filterInfo: string;
   public newWord: string;
 
-  constructor(http: HttpClient, @Inject('REST_API_BASE_URL') restApiBaseUrl: string) {
+  constructor(http: HttpClient,
+    @Inject('REST_API_BASE_URL') restApiBaseUrl: string) {
+
     this.http = http;
     this.restApiBaseUrl = restApiBaseUrl;
     this.filter = "";
